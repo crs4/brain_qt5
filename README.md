@@ -52,6 +52,6 @@ To install **CRS4 ViC BRAIN** run the following shell commands from the root dir
 ```
 
 ## Further information
-**CRS4 ViC BRAIN** software was developed by the CRS4 Visual Computing group. More information is available at this web address: (http://www.crs4.it/vic/download/brain/)
+**CRS4 ViC BRAIN** software was developed by the CRS4 Visual Computing group. More information is available at this web address: http://www.crs4.it/vic/download/brain/
 
-Information about the CRS4 Visual Computing group is available at this web address: (http://www.crs4.it/vic)
+Information about the CRS4 Visual Computing group is available at this web address: http://www.crs4.it/vic
