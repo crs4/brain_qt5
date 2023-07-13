@@ -1,0 +1,26 @@
+<!DOCTYPE RCC><RCC version="1.0">
+<qresource>
+<file>Icons/assignId.xpm</file>
+<file>Icons/camera.xpm</file>
+<file>Icons/crs4_m.xpm</file>
+<file>Icons/cut3D.xpm</file>
+<file>Icons/deform.xpm</file>
+<file>Icons/edit_old.xpm</file>
+<file>Icons/edit.xpm</file>
+<file>Icons/filehist.xpm</file>
+<file>Icons/fileopen.xpm</file>
+<file>Icons/fileprint.xpm</file>
+<file>Icons/filesave.xpm</file>
+<file>Icons/filetest.xpm</file>
+<file>Icons/measure.xpm</file>
+<file>Icons/record.xpm</file>
+<file>Icons/redo.xpm</file>
+<file>Icons/reset_old.xpm</file>
+<file>Icons/reset.xpm</file>
+<file>Icons/rotate_old.xpm</file>
+<file>Icons/rotate.xpm</file>
+<file>Icons/trans3D.xpm</file>
+<file>Icons/transxy.xpm</file>
+<file>Icons/undo.xpm</file>
+</qresource>
+</RCC>

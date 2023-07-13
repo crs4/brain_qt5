@@ -1,0 +1,516 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ui version="4.0" stdsetdef="1">
+  <author></author>
+  <comment></comment>
+  <exportmacro></exportmacro>
+  <class>bsIsoViewerWindow3D</class>
+  <widget class="QWidget" name="bsIsoViewerWindow3D">
+    <property name="geometry">
+      <rect>
+        <x>0</x>
+        <y>0</y>
+        <width>638</width>
+        <height>417</height>
+      </rect>
+    </property>
+    <property name="windowTitle">
+      <string>bsIsoViewerWindow3D</string>
+    </property>
+    <layout class="QVBoxLayout">
+      <property name="margin">
+        <number>11</number>
+      </property>
+      <property name="spacing">
+        <number>6</number>
+      </property>
+      <item>
+        <layout class="QHBoxLayout">
+          <property name="margin">
+            <number>0</number>
+          </property>
+          <property name="spacing">
+            <number>6</number>
+          </property>
+          <item>
+            <widget class="QPushButton" name="m_reset_button">
+              <property name="text">
+                <string/>
+              </property>
+              <property name="icon">
+                <pixmap>image0</pixmap>
+              </property>
+              <property name="toolTip">
+                <string>Reset</string>
+              </property>
+            </widget>
+          </item>
+          <item>
+            <widget class="QPushButton" name="m_rebuild_button">
+              <property name="text">
+                <string>Rebuild</string>
+              </property>
+            </widget>
+          </item>
+          <item>
+            <widget class="QRadioButton" name="m_enable_subregions">
+              <property name="font">
+                <font>
+                  <pointsize>8</pointsize>
+                </font>
+              </property>
+              <property name="text">
+                <string>Subregions</string>
+              </property>
+              <property name="toolTip">
+                <string>Draft Quality</string>
+              </property>
+            </widget>
+          </item>
+          <item>
+            <widget class="QRadioButton" name="m_enable_neurons">
+              <property name="font">
+                <font>
+                  <pointsize>8</pointsize>
+                </font>
+              </property>
+              <property name="text">
+                <string>Neurons</string>
+              </property>
+              <property name="toolTip">
+                <string>Draft Quality</string>
+              </property>
+            </widget>
+          </item>
+          <item>
+            <widget class="QRadioButton" name="m_enable_cutting_planes">
+              <property name="font">
+                <font>
+                  <pointsize>8</pointsize>
+                </font>
+              </property>
+              <property name="text">
+                <string>Cut</string>
+              </property>
+              <property name="toolTip">
+                <string>Draft Quality</string>
+              </property>
+            </widget>
+          </item>
+          <item>
+            <spacer name="Spacer1">
+              <property name="sizeHint">
+                <size>
+                  <width>20</width>
+                  <height>20</height>
+                </size>
+              </property>
+              <property name="sizeType">
+                <enum>QSizePolicy::Expanding</enum>
+              </property>
+              <property name="orientation">
+                <enum>Qt::Horizontal</enum>
+              </property>
+            </spacer>
+          </item>
+          <item>
+            <widget class="QLabel" name="TextLabel1">
+              <property name="sizePolicy">
+                <sizepolicy>
+                  <hsizetype>0</hsizetype>
+                  <vsizetype>0</vsizetype>
+                </sizepolicy>
+              </property>
+              <property name="font">
+                <font>
+                  <family>helvetica</family>
+                  <pointsize>8</pointsize>
+                </font>
+              </property>
+              <property name="text">
+                <string>Alpha</string>
+              </property>
+              <property name="wordWrap">
+                <bool>false</bool>
+              </property>
+            </widget>
+          </item>
+          <item>
+            <widget class="QSlider" name="m_extinction_zeta">
+              <property name="sizePolicy">
+                <sizepolicy>
+                  <hsizetype>7</hsizetype>
+                  <vsizetype>0</vsizetype>
+                </sizepolicy>
+              </property>
+              <property name="maximumSize">
+                <size>
+                  <width>100</width>
+                  <height>20</height>
+                </size>
+              </property>
+              <property name="font">
+                <font>
+                  <family>helvetica</family>
+                  <pointsize>8</pointsize>
+                </font>
+              </property>
+              <property name="maximum">
+                <number>30</number>
+              </property>
+              <property name="value">
+                <number>10</number>
+              </property>
+              <property name="orientation">
+                <enum>Qt::Horizontal</enum>
+              </property>
+              <property name="tickPosition">
+                <enum>QSlider::TicksBothSides</enum>
+              </property>
+              <property name="tickInterval">
+                <number>3</number>
+              </property>
+              <property name="toolTip">
+                <string/>
+              </property>
+              <property name="whatsThis">
+                <string>sets the transparency of neurons</string>
+              </property>
+            </widget>
+          </item>
+          <item>
+            <widget class="Q3Frame" name="m_tool_frame">
+              <property name="sizePolicy">
+                <sizepolicy>
+                  <hsizetype>5</hsizetype>
+                  <vsizetype>1</vsizetype>
+                </sizepolicy>
+              </property>
+              <property name="minimumSize">
+                <size>
+                  <width>40</width>
+                  <height>40</height>
+                </size>
+              </property>
+              <property name="maximumSize">
+                <size>
+                  <width>32767</width>
+                  <height>40</height>
+                </size>
+              </property>
+              <property name="frameShape">
+                <enum>QFrame::StyledPanel</enum>
+              </property>
+              <property name="frameShadow">
+                <enum>QFrame::Raised</enum>
+              </property>
+            </widget>
+          </item>
+        </layout>
+      </item>
+      <item>
+        <widget class="Q3Frame" name="bsViewerFrame">
+          <property name="palette">
+            <palette>
+              <active>
+                <color>
+                  <red>0</red>
+                  <green>0</green>
+                  <blue>0</blue>
+                </color>
+                <color>
+                  <red>160</red>
+                  <green>160</green>
+                  <blue>160</blue>
+                </color>
+                <color>
+                  <red>240</red>
+                  <green>240</green>
+                  <blue>240</blue>
+                </color>
+                <color>
+                  <red>200</red>
+                  <green>200</green>
+                  <blue>200</blue>
+                </color>
+                <color>
+                  <red>80</red>
+                  <green>80</green>
+                  <blue>80</blue>
+                </color>
+                <color>
+                  <red>106</red>
+                  <green>106</green>
+                  <blue>106</blue>
+                </color>
+                <color>
+                  <red>0</red>
+                  <green>0</green>
+                  <blue>0</blue>
+                </color>
+                <color>
+                  <red>255</red>
+                  <green>255</green>
+                  <blue>255</blue>
+                </color>
+                <color>
+                  <red>0</red>
+                  <green>0</green>
+                  <blue>0</blue>
+                </color>
+                <color>
+                  <red>196</red>
+                  <green>196</green>
+                  <blue>196</blue>
+                </color>
+                <color>
+                  <red>0</red>
+                  <green>0</green>
+                  <blue>0</blue>
+                </color>
+                <color>
+                  <red>0</red>
+                  <green>0</green>
+                  <blue>0</blue>
+                </color>
+                <color>
+                  <red>0</red>
+                  <green>0</green>
+                  <blue>0</blue>
+                </color>
+                <color>
+                  <red>196</red>
+                  <green>196</green>
+                  <blue>196</blue>
+                </color>
+              </active>
+              <inactive>
+                <color>
+                  <red>0</red>
+                  <green>0</green>
+                  <blue>0</blue>
+                </color>
+                <color>
+                  <red>160</red>
+                  <green>160</green>
+                  <blue>160</blue>
+                </color>
+                <color>
+                  <red>240</red>
+                  <green>240</green>
+                  <blue>240</blue>
+                </color>
+                <color>
+                  <red>184</red>
+                  <green>184</green>
+                  <blue>184</blue>
+                </color>
+                <color>
+                  <red>80</red>
+                  <green>80</green>
+                  <blue>80</blue>
+                </color>
+                <color>
+                  <red>106</red>
+                  <green>106</green>
+                  <blue>106</blue>
+                </color>
+                <color>
+                  <red>0</red>
+                  <green>0</green>
+                  <blue>0</blue>
+                </color>
+                <color>
+                  <red>255</red>
+                  <green>255</green>
+                  <blue>255</blue>
+                </color>
+                <color>
+                  <red>0</red>
+                  <green>0</green>
+                  <blue>0</blue>
+                </color>
+                <color>
+                  <red>196</red>
+                  <green>196</green>
+                  <blue>196</blue>
+                </color>
+                <color>
+                  <red>0</red>
+                  <green>0</green>
+                  <blue>0</blue>
+                </color>
+                <color>
+                  <red>0</red>
+                  <green>0</green>
+                  <blue>0</blue>
+                </color>
+                <color>
+                  <red>0</red>
+                  <green>0</green>
+                  <blue>0</blue>
+                </color>
+                <color>
+                  <red>196</red>
+                  <green>196</green>
+                  <blue>196</blue>
+                </color>
+              </inactive>
+              <disabled>
+                <color>
+                  <red>128</red>
+                  <green>128</green>
+                  <blue>128</blue>
+                </color>
+                <color>
+                  <red>160</red>
+                  <green>160</green>
+                  <blue>160</blue>
+                </color>
+                <color>
+                  <red>240</red>
+                  <green>240</green>
+                  <blue>240</blue>
+                </color>
+                <color>
+                  <red>184</red>
+                  <green>184</green>
+                  <blue>184</blue>
+                </color>
+                <color>
+                  <red>80</red>
+                  <green>80</green>
+                  <blue>80</blue>
+                </color>
+                <color>
+                  <red>106</red>
+                  <green>106</green>
+                  <blue>106</blue>
+                </color>
+                <color>
+                  <red>0</red>
+                  <green>0</green>
+                  <blue>0</blue>
+                </color>
+                <color>
+                  <red>255</red>
+                  <green>255</green>
+                  <blue>255</blue>
+                </color>
+                <color>
+                  <red>128</red>
+                  <green>128</green>
+                  <blue>128</blue>
+                </color>
+                <color>
+                  <red>196</red>
+                  <green>196</green>
+                  <blue>196</blue>
+                </color>
+                <color>
+                  <red>0</red>
+                  <green>0</green>
+                  <blue>0</blue>
+                </color>
+                <color>
+                  <red>0</red>
+                  <green>0</green>
+                  <blue>0</blue>
+                </color>
+                <color>
+                  <red>0</red>
+                  <green>0</green>
+                  <blue>0</blue>
+                </color>
+                <color>
+                  <red>196</red>
+                  <green>196</green>
+                  <blue>196</blue>
+                </color>
+              </disabled>
+            </palette>
+          </property>
+          <property name="frameShape">
+            <enum>QFrame::StyledPanel</enum>
+          </property>
+          <property name="frameShadow">
+            <enum>QFrame::Raised</enum>
+          </property>
+          <layout class="QVBoxLayout">
+            <property name="margin">
+              <number>11</number>
+            </property>
+            <property name="spacing">
+              <number>6</number>
+            </property>
+            <item>
+              <widget class="bsIsoBrainViewer" name="m_viewer"/>
+            </item>
+          </layout>
+        </widget>
+      </item>
+    </layout>
+  </widget>
+  <customwidgets>
+    <customwidget>
+      <class>bsIsoBrainViewer</class>
+      <extends>QWidget</extends>
+      <header location="local">bsIsoBrainViewer.h</header>
+      <sizehint>
+        <width>-1</width>
+        <height>-1</height>
+      </sizehint>
+      <container>0</container>
+      <sizepolicy>
+        <hordata>5</hordata>
+        <verdata>5</verdata>
+      </sizepolicy>
+      <pixmap>image1</pixmap>
+    </customwidget>
+  </customwidgets>
+  <images>
+    <image name="image0">
+      <data format="XPM.GZ" length="661">789cadd0cb0ac2301005d07dbe62e8dd15996a5d8a9fa0b814c4c510155d5441eb42c47f37495f6368dde825814c0e796629ad570b4a33732ba53c59b247b952babb17c563b39d3f4d92e7e4da9426c9c8244c969697f3de8fe1c61887f8527c7970a94aeecd6f02b83e2400fa0510451f22a2488b88a6566ae8a8110fd57e0dd51226dde52a41270893688f4227cccd3112d642df400b0f0bc752bfb64ff85fa212fd689c2ff29a9937238385ce</data>
+    </image>
+    <image name="image1">
+      <data format="XPM.GZ" length="646">789c6dd2c10ac2300c00d07bbf2234b7229d1be245fc04c5a3201e4615f430059d0711ff5ddb2e6bb236ec90eed134cb5a19d8ef36602af5ecdbfeeac05dda0798d3abebde87e3faa374d3807fa0d633a52d38d8de6f679fe33fc776e196f53cd010188256a3600a292882096246517815ca99884606e18044a3a40d91824820924265a7923a2e8bcd05f33db1173e002913175f2a6be6d3294871a2d95fa00e8a94ee017b69d339d90df1e77c57ea072ede6758</data>
+    </image>
+  </images>
+  <connections>
+    <connection>
+      <sender>m_enable_neurons</sender>
+      <signal>toggled(bool)</signal>
+      <receiver>m_viewer</receiver>
+      <slot>setEnableNeuronTypes(bool)</slot>
+    </connection>
+    <connection>
+      <sender>m_enable_subregions</sender>
+      <signal>toggled(bool)</signal>
+      <receiver>m_viewer</receiver>
+      <slot>setEnableSubRegions(bool)</slot>
+    </connection>
+    <connection>
+      <sender>m_rebuild_button</sender>
+      <signal>clicked()</signal>
+      <receiver>m_viewer</receiver>
+      <slot>rebuild()</slot>
+    </connection>
+    <connection>
+      <sender>m_reset_button</sender>
+      <signal>clicked()</signal>
+      <receiver>m_viewer</receiver>
+      <slot>reset()</slot>
+    </connection>
+    <connection>
+      <sender>m_extinction_zeta</sender>
+      <signal>valueChanged(int)</signal>
+      <receiver>m_viewer</receiver>
+      <slot>handleExtinctionZetaChange(int)</slot>
+    </connection>
+    <connection>
+      <sender>m_enable_cutting_planes</sender>
+      <signal>toggled(bool)</signal>
+      <receiver>m_viewer</receiver>
+      <slot>setCuttingPlanesFlag(bool)</slot>
+    </connection>
+  </connections>
+</ui>

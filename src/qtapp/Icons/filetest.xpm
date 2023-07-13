@@ -1,0 +1,20 @@
+/* XPM */
+static const char *filetest[] = {
+"16 13 3 1",
+" 	c None",
+".	c #FFFFFFFF0000",
+"X	c #00000000FFFF",
+"o      c #000000",
+"                ",
+"  ooooooooooooo ",
+"  o...........o ",
+"  o.XXXXXXXXX.o ",
+"  o....XXX....o ",
+"  o....XXX....o ",
+"  o....XXX....o ",
+"  o....XXX....o ",
+"  o....XXX....o ",
+"  o....XXX....o ",
+"  o...........o ",
+"  ooooooooooooo ",
+"                "};

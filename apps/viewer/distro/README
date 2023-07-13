@@ -1,0 +1,6 @@
+HOW TO CREATE THE DISTRO
+
+1) Compile NEMBO viewer
+2) cd distro
+3) sh makedistro.sh
+

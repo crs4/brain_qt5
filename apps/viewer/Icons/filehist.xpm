@@ -1,0 +1,19 @@
+/* XPM */
+static const char *filehist[] = {
+"16 13 3 1",
+" 	c None",
+".	c #000000000000",
+"X	c #E3E3FFFF6E6E",
+"     ......     ",
+"   ..XXXXXX..   ",
+"  .XXXX.XXXXX.  ",
+" .XXXXX.XXXXXX. ",
+".XXXXXX.XXXXXXX.",
+".XXXXXX.XXXXXXX.",
+".XXXXXX.XXXXXXX.",
+".XXXXXXX..XXXXX.",
+".XXXXXXXXX..XXX.",
+" .XXXXXXXXXXXX. ",
+"  .XXXXXXXXXX.  ",
+"   ..XXXXXX..   ",
+"     ......     "};

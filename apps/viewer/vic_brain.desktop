@@ -1,0 +1,7 @@
+[Desktop Entry]
+Name=BRAIN
+Comment=BRAIN - CRS4
+Exec=/usr/local/bin/vic_brain_viewer
+Icon=vic-brain
+Terminal=false
+Type=Application

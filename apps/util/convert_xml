@@ -1,0 +1,64 @@
+#!/bin/bash
+
+usage() {
+cat << EOF
+CRS4/ViC 29-07-2022 by FB
+
+usage: $0 <old_xml> <new_xml>
+
+Convert old BRAIN XML file into latest BRAIN XML format. 
+
+Options:
+   -h      Show this message
+EOF
+}
+
+
+#PARSING OPTIONS
+
+while getopts  "h" OPTION
+do
+    case $OPTION in
+	h)
+	    usage
+	    exit 1
+	    ;;
+	?)
+	    usage
+	    exit
+	    ;;
+    esac
+done
+shift $((OPTIND-1))
+
+XML_IN=$1
+XML_OUT=$2
+
+if [ "$#" -ne 2 ]; then
+    echo "ERROR: Two filenames must be specified"
+    usage
+    exit
+fi
+
+if [[ ! -f ${XML_IN} ]]
+then
+    echo "ERROR: ${XML_IN} does not exist!"
+    exit
+fi
+
+if [[ -f ${XML_OUT} ]]
+then
+    echo "WARNING: ${XML_OUT} already exist!"
+    while true; do
+    read -p "Continue? " yn
+    case $yn in
+        [Yy]* ) break;;
+        [Nn]* ) exit;;
+        * ) echo "Please answer Y or N.";;
+    esac
+    done
+fi
+
+echo Convert ${XML_IN} into ${XML_OUT}
+sed 's/,/\./' ${XML_IN} > ${XML_OUT}
+echo DONE!

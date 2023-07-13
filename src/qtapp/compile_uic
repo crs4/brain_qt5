@@ -1,0 +1,16 @@
+#!/bin/bash
+
+filename=$1
+
+echo uic -o $filename.h $filename.ui
+uic -o $filename.h $filename.ui
+
+echo uic -o $filename.cpp -impl $filename.h $filename.ui
+uic -o $filename.cpp -impl $filename.h $filename.ui
+
+echo uic -o ${filename}Impl.h -subdecl ${filename}Impl $filename.h $filename.ui
+uic -o ${filename}Impl.h -subdecl ${filename}Impl $filename.h $filename.ui
+
+echo uic -o ${filename}Impl.cpp -subimpl ${filename}Impl ${filename}Impl.h $filename.ui
+uic -o ${filename}Impl.cpp -subimpl ${filename}Impl ${filename}Impl.h $filename.ui
+

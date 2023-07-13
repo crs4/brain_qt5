@@ -1,0 +1,140 @@
+<!DOCTYPE UI><UI>
+<class>bsMeasureWidget</class>
+<widget>
+    <class>QWidget</class>
+    <property stdset="1">
+        <name>name</name>
+        <cstring>bsMeasureWidget</cstring>
+    </property>
+    <property stdset="1">
+        <name>geometry</name>
+        <rect>
+            <x>0</x>
+            <y>0</y>
+            <width>600</width>
+            <height>480</height>
+        </rect>
+    </property>
+    <property stdset="1">
+        <name>caption</name>
+        <string>Measure Tool</string>
+    </property>
+    <grid>
+        <property stdset="1">
+            <name>margin</name>
+            <number>11</number>
+        </property>
+        <property stdset="1">
+            <name>spacing</name>
+            <number>6</number>
+        </property>
+        <widget row="0"  column="0" >
+            <class>QFrame</class>
+            <property stdset="1">
+                <name>name</name>
+                <cstring>Frame3</cstring>
+            </property>
+            <property stdset="1">
+                <name>frameShadow</name>
+                <enum>Raised</enum>
+            </property>
+            <property stdset="1">
+                <name>frameShape</name>
+                <enum>StyledPanel</enum>
+            </property>
+            <grid>
+                <property stdset="1">
+                    <name>margin</name>
+                    <number>11</number>
+                </property>
+                <property stdset="1">
+                    <name>spacing</name>
+                    <number>6</number>
+                </property>
+                <widget row="0"  column="0" >
+                    <class>QLabel</class>
+                    <property stdset="1">
+                        <name>name</name>
+                        <cstring>m_label_01</cstring>
+                    </property>
+                    <property stdset="1">
+                        <name>text</name>
+                        <string>Start point</string>
+                    </property>
+                </widget>
+                <widget row="0"  column="1" >
+                    <class>QLineEdit</class>
+                    <property stdset="1">
+                        <name>name</name>
+                        <cstring>m_start_point</cstring>
+                    </property>
+                    <property stdset="1">
+                        <name>focusPolicy</name>
+                        <enum>NoFocus</enum>
+                    </property>
+                    <property stdset="1">
+                        <name>text</name>
+                        <string>NULL</string>
+                    </property>
+                    <property stdset="1">
+                        <name>enabled</name>
+                        <bool>true</bool>
+                    </property>
+                </widget>
+                <widget row="1"  column="1" >
+                    <class>QLineEdit</class>
+                    <property stdset="1">
+                        <name>name</name>
+                        <cstring>m_end_point</cstring>
+                    </property>
+                    <property stdset="1">
+                        <name>focusPolicy</name>
+                        <enum>NoFocus</enum>
+                    </property>
+                    <property stdset="1">
+                        <name>text</name>
+                        <string>NULL</string>
+                    </property>
+                </widget>
+                <widget row="1"  column="0" >
+                    <class>QLabel</class>
+                    <property stdset="1">
+                        <name>name</name>
+                        <cstring>m_label_02</cstring>
+                    </property>
+                    <property stdset="1">
+                        <name>text</name>
+                        <string>End point</string>
+                    </property>
+                </widget>
+                <widget row="2"  column="0" >
+                    <class>QLabel</class>
+                    <property stdset="1">
+                        <name>name</name>
+                        <cstring>m_label_03</cstring>
+                    </property>
+                    <property stdset="1">
+                        <name>text</name>
+                        <string>Distance</string>
+                    </property>
+                </widget>
+                <widget row="2"  column="1" >
+                    <class>QLineEdit</class>
+                    <property stdset="1">
+                        <name>name</name>
+                        <cstring>m_distance</cstring>
+                    </property>
+                    <property stdset="1">
+                        <name>focusPolicy</name>
+                        <enum>NoFocus</enum>
+                    </property>
+                    <property stdset="1">
+                        <name>text</name>
+                        <string>NULL</string>
+                    </property>
+                </widget>
+            </grid>
+        </widget>
+    </grid>
+</widget>
+</UI>

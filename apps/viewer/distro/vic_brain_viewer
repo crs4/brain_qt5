@@ -1,0 +1,60 @@
+#!/bin/sh
+#
+# CRS4 ViC BRAIN Viewer startup script
+#
+
+PKG_APP=vic_brain_viewer-bin
+PKG_LIB=lib
+
+# Function to find the real directory a program resides in.
+# Feb. 17, 2000 - Sam Lantinga, Loki Entertainment Software
+FindPath()
+{
+    fullpath="`echo $1 | grep /`"
+    if [ "$fullpath" = "" ]; then
+        oIFS="$IFS"
+        IFS=:
+        for path in $PATH `dirname $0`
+        do if [ -x "$path/$1" ]; then
+               if [ "$path" = "" ]; then
+                   path="."
+               fi
+               fullpath="$path/$1"
+               break
+           fi
+        done
+        IFS="$oIFS"
+    fi
+    if [ "$fullpath" = "" ]; then
+        fullpath="$1"
+    fi
+
+    # Is the sed/ls magic portable?
+    if [ -L "$fullpath" ]; then
+        #fullpath="`ls -l "$fullpath" | awk '{print $11}'`"
+        fullpath=`ls -l "$fullpath" |sed -e 's/.* -> //' |sed -e 's/\*//'`
+    fi
+    dirname $fullpath
+}
+
+# Set the home if not already set.
+if [ "${VICBRAIN_PATH}" = "" ]; then
+    VICBRAIN_PATH="`FindPath $PKG_APP`"
+fi
+
+LD_LIBRARY_PATH=${VICBRAIN_PATH}/${PKG_LIB}:${LD_LIBRARY_PATH}
+export LD_LIBRARY_PATH
+
+
+# Let's boogie!
+VICBRAIN_APP=${VICBRAIN_PATH}/${PKG_APP}
+if [ -x "${VICBRAIN_APP}" ]
+then
+#	cd "${VICBRAIN_PATH}/"
+	exec "${VICBRAIN_APP}" "$@"
+fi
+echo "Couldn't run CRS4 ViC Brain Viewer (${PKG_APP}). Is VICBRAIN_PATH set?"
+exit 1
+
+# end of ViC Brain Viewer
+
