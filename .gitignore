@@ -1,0 +1,5 @@
+Makefile
+Release
+ui_*.hpp
+.qmake.stash
+apps/viewer/vic_brain_viewer
