@@ -91,6 +91,7 @@ public slots:
   void reset_left();
   void reset_top();
   void reset_bottom();
+  void reset_front();
   void reset_rear();
   void handlingMouseWheelChangedEvent ( QWheelEvent * e );
 

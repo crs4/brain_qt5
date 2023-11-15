@@ -70,7 +70,7 @@ public:
    }
 
  inline void appendTexture() {
-   GLuint t;
+   GLuint t = 0;
    m_texture_tiles.push_back(t);
  }
 

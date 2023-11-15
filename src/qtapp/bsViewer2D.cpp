@@ -138,7 +138,6 @@ void bsViewer2D::setCellStepY(float value)
 void bsViewer2D::setGrid(bool b)
 {
   m_grid_flag = b;
-  std::cerr << " setGrid " << b << std::endl;
   updateGL();
 }
 

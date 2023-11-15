@@ -248,6 +248,15 @@ void bsViewer3D::reset_bottom() {
   updateGL();
 }
 
+void bsViewer3D::reset_front() {
+  resetP();
+  m_current_cameraV = sl::linear_map_factory3f::lookat(m_init_box.center()+
+						       sl::column_vector3f(0.0f,0.0f,maxCameraDistance()),
+						       m_init_box.center(),
+						       0.0f);
+  updateGL();
+}
+
 void bsViewer3D::reset_rear() {
   resetP();
   m_current_cameraV = sl::linear_map_factory3f::lookat(m_init_box.center()+

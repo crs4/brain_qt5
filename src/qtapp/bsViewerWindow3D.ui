@@ -89,9 +89,6 @@
            <pointsize>8</pointsize>
           </font>
          </property>
-         <property name="toolTip">
-          <string>Reset</string>
-         </property>
          <property name="text">
           <string>Top</string>
          </property>
@@ -116,9 +113,6 @@
            <family>adobe-helvetica</family>
            <pointsize>8</pointsize>
           </font>
-         </property>
-         <property name="toolTip">
-          <string>Reset</string>
          </property>
          <property name="text">
           <string>Bottom</string>
@@ -145,9 +139,6 @@
            <pointsize>8</pointsize>
           </font>
          </property>
-         <property name="toolTip">
-          <string>Reset</string>
-         </property>
          <property name="text">
           <string>Right</string>
          </property>
@@ -173,9 +164,6 @@
            <pointsize>8</pointsize>
           </font>
          </property>
-         <property name="toolTip">
-          <string>Reset</string>
-         </property>
          <property name="text">
           <string>Rear</string>
          </property>
@@ -189,16 +177,20 @@
            <height>25</height>
           </size>
          </property>
-         <property name="toolTip">
-          <string>Reset</string>
+         <property name="maximumSize">
+          <size>
+           <width>40</width>
+           <height>25</height>
+          </size>
+         </property>
+         <property name="font">
+          <font>
+           <family>adobe-helvetica</family>
+           <pointsize>8</pointsize>
+          </font>
          </property>
          <property name="text">
-          <string/>
-         </property>
-         <property name="icon">
-          <iconset>
-           <normalon>:/Icons/reset.xpm</normalon>
-          </iconset>
+          <string>Front</string>
          </property>
         </widget>
        </item>
@@ -222,15 +214,37 @@
            <pointsize>8</pointsize>
           </font>
          </property>
-         <property name="toolTip">
-          <string>Reset</string>
-         </property>
          <property name="text">
           <string>Left</string>
          </property>
         </widget>
        </item>
       </layout>
+     </item>
+     <item>
+        <widget class="QPushButton" name="m_home_button">
+         <property name="minimumSize">
+          <size>
+           <width>50</width>
+           <height>25</height>
+          </size>
+         </property>
+         <property name="maximumSize">
+          <size>
+           <width>40</width>
+           <height>25</height>
+          </size>
+         </property>
+         <property name="font">
+          <font>
+           <family>adobe-helvetica</family>
+           <pointsize>8</pointsize>
+          </font>
+         </property>
+         <property name="text">
+          <string>Reset</string>
+         </property>
+        </widget>     
      </item>
      <item>
       <widget class="QRadioButton" name="m_draft_quality_button">
@@ -1127,6 +1141,22 @@
   </connection>
   <connection>
    <sender>m_reset_button</sender>
+   <signal>clicked()</signal>
+   <receiver>m_viewer</receiver>
+   <slot>reset_front()</slot>
+   <hints>
+    <hint type="sourcelabel">
+     <x>20</x>
+     <y>20</y>
+    </hint>
+    <hint type="destinationlabel">
+     <x>20</x>
+     <y>20</y>
+    </hint>
+   </hints>
+  </connection>
+  <connection>
+   <sender>m_home_button</sender>
    <signal>clicked()</signal>
    <receiver>m_viewer</receiver>
    <slot>reset()</slot>
